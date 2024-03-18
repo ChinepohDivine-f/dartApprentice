@@ -1,0 +1,196 @@
+//chapter 1
+
+void main() {
+  print("Hello, Dart!");
+}
+
+
+
+
+
+//chapte 2
+
+import 'package:expressions_and_variables/expressions_and_variables.dart'
+    as expressions_and_variables;
+
+import 'dart:math';
+import 'package:characters/characters.dart';
+
+void main() {
+  print('Hello world: ${expressions_and_variables.print()}!');
+  print(4 + 44);
+  print(sqrt(100));
+  print(max(5, 12));
+
+  print(sin(45 * pi / 180)); // from dart math libary
+
+  // mini challenge
+
+  print(1 / sqrt(2)); // same as sin 45
+  // interesting things that you can do with objects
+  print(10.isEven);
+
+  num number; // we can sign double and float to num datatupe
+  number = 4;
+  number = 3.45;
+
+  // type safety
+  /// we cannot asign a double to an int
+  /// or a string to an int.
+  ///
+  /// type inference
+  /// using the var we can infer the type
+  var mynumber = 10; // set var to int because 10 is and interger
+
+  ///constants
+  ///we have the const and final and theri values never change
+  /// const is conpile time constant
+  /// final is a runtime constants and its value is know
+  /// after the programs start runnin
+  final hoursSinceMidnight = DateTime.now().hour;
+  // print('yo ma n...');
+  print(hoursSinceMidnight);
+
+  /// mini exercises
+  int myAge = 19;
+  double averageAge = 19;
+  averageAge = (19 + 20) / 2;
+  const testNumber = 14;
+  const evenOdd = testNumber % 2;
+  print("min challenge result:");
+  print('''
+  my age = ${myAge}
+  average age = $averageAge
+  test number = $testNumber
+  even odd = $evenOdd
+
+''');
+
+  // challenges
+  const int myAge_ = 19;
+  int dogs = 0;
+  dogs += 1;
+  print('''
+my age: $myAge_
+dogs: $dogs
+
+''');
+
+// challenge 2
+  var age = 16;
+  print(age);
+  age = 30;
+  print(age);
+
+// challenge 3
+  const x = 46;
+  const y = 10;
+  const answer1 = (x * 100) + y;
+  const answer2 = (x * 100) + (y * 100);
+  const answer3 = (x * 100) + (y / 10);
+  print("""
+answer1: $answer1
+answer2: $answer2
+answer3: $answer3
+""");
+
+// challenge 4
+  const double rating1 = 4;
+  const double rating2 = 15;
+
+  const double rating3 = 9;
+  const averageRating = (rating3 + rating2 + rating1) / 2;
+  print(averageRating);
+
+  //challenge 5
+  const double a = 2;
+  const double b = 12;
+  const double c = 10;
+  final det = sqrt(b * b - 4 * a * c);
+  // Calculate roots
+  final double x1 = (-b + det) / (2 * a);
+  final double x2 = (-b - det) / (2 * a);
+
+  // Output roots
+  // const double root1 = x1;
+  // const double root2 = x2;
+  print(det);
+  print("Root 1: $x1");
+  print("Root 2: $x2");
+
+}
+
+
+
+
+
+
+
+// chapter three 
+
+
+import 'package:characters/characters.dart';
+
+void main() {
+
+  /// chapter three
+  /// mini exercies
+
+  const age1 = 42;
+  const age2 = 21;
+
+  // min exercise 2
+  const averageAge_ = (age1 + age2) / 2;
+
+  const oneLine = 'This is only '
+      'a single \n'
+      'line '
+      'at runtime.';
+  print(oneLine);
+  const rawString = r'My name is peter\n pan';
+  print(rawString);
+  print('I \u2764 Dart\u0021  \u{1F3BC}');
+  const family = ' ';
+  family.characters.length; // 1
+  // mini exercise
+  // exercise1
+
+  const firstName = "chinepoh";
+  const lastName = "Divine-f";
+  const fullName = '$firstName $lastName';
+
+  String myDetails = '''
+  Hello, my name is $fullName
+  ''';
+  print(myDetails);
+
+  /// challenges
+  /// challenge 1
+  const totalPoints = 100;
+  const attendanceW = 0.2;
+  const homeworkW = 0.3;
+  const examW = 0.5;
+
+  const attendance = 90 * attendanceW;
+  const homework = 80 * homeworkW;
+  const exam = 94 * examW;
+
+  final grade = attendance + homework + exam;
+  print(grade.round());
+
+  /// challenge 2
+  const twoCountries = '';
+
+  
+  // challenge3
+const vote = 'Thumbs up! ';
+  // challenge 5
+  String name = 'Ray'; // removed the const becasue it is immutable
+  name += " Wendrlich";
+  print(name);
+  //challenge 6
+  const number_ = 10;
+  const multiplier = 5;
+  final summary = '$number_ \u00D7 $multiplier = ${number_ * multiplier}';
+  print(summary);
+
