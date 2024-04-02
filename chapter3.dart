@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'dart:math';
 
 import 'package:chapter3/chapter3.dart' as chapter3;
@@ -115,7 +116,7 @@ void main(List<String> arguments) {
 // get the number
 //
   print("Next power of two");
-  const sampleNumber = 30;
+  const sampleNumber = 10;
   for (int i = 0; i < sampleNumber; i++) {
     var powerOfTwo = pow(2, i);
     if (powerOfTwo >= sampleNumber) {
@@ -126,10 +127,35 @@ void main(List<String> arguments) {
   }
 
   // fibonacci
+  int a = 0;
+  int b = 1;
+  int temp;
   for (int i = 0; i < sampleNumber; i++) {
-    int nextNumber = i + 1;
-    
+    temp = a;
+    a = b;
+    b = a + temp;
+    print("$a and $b");
+  }
+
+  // HOw many times?
+  print('--------------------how many times');
+  var sum = 0;
+  for (var i = 0; i <= 5; i++) {
+    sum += 1;
+  }
+  print(sum);
+
+  print('Final countdown');
+  for (var count = 10; count > 0; count--) {
+    print(count);
+    sleep(Duration(milliseconds: 100));
+  }
+  print('April Fool');
+
+  /// print a sequence
+  var i = 0.0;
+  while (i < 1) {
+    print(i.toStringAsFixed(1));
+    i += 0.1;
   }
 }
-
- 
