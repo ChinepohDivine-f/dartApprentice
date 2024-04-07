@@ -63,9 +63,7 @@ void main(List<String> arguments) {
   String greeting = 'hello';
   bool isHungry = true;
   // first class funtion
-  Function multiply = (int a, int b) {
-    return a * b;
-  };
+  Function multiply = (int a, int b) => a * b;
 
   Function myFunction = multiply;
 
@@ -104,7 +102,44 @@ void main(List<String> arguments) {
 
   print(
       counter); // the value of counter can still be accessed out of the function
+
+  /// mini exercise
+  /// ex 1
+  final wonderful = (String name) {
+    print('$name, you are wonderful');
+  };
+  print(wonderful('Messi'));
+
+  /// ex 2
+  const people = ['Chris', 'Tiffani', 'Pablo'];
+  people.forEach((name) => wonderful(name));
+
+  /// arrow functions
+  ///
+  /// arrow functions in dart
+  int add(int a, int b) => a + b;
+
+  /// challenges
+  ///
+  // challenges
+  // 1
+  final x = isPrime(7);
+  print(x);
+
+  // 2
+  final repeatTask = (int times, int input, Function task) {
+    for (var i = 0; i < times; i++) input = task(input);
+    return input;
+  };
+
+  final result = repeatTask(4, 2, (int value) {
+    return value * value;
+  });
+
+  print(result);
 }
+
+/// end of main
 
 String compliment(int number) {
   return '$number is a very nice number';
@@ -172,4 +207,19 @@ Function applyMuliplier(num mulitplier) {
 
     /// closure
   };
+}
+
+/// arrow functions in dart
+int add(int a, int b) => a + b;
+
+/// challenge 1
+
+bool isPrime(int num) {
+  // prime numbers are divisible by 1 and themselves
+  if (num < 2) return false;
+  for (var i = 2; i < num; i++) {
+    // print(i);
+    if (num % i == 0) return false;
+  }
+  return true;
 }
