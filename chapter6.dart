@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:chapter6/chapter6.dart' as chapter6;
 
 void main() {
@@ -6,10 +8,16 @@ void main() {
 
   // create and instace of user
   final user = User()
-  ..id = 42
-  ..name = 'Boris Atoh'; // using cascading the semicolon appears on the last line
+    ..id = 42
+    ..name =
+        'Boris Atoh'; // using cascading the semicolon appears on the last line
   print(user.toJson());
   print(user.toString());
+
+  /// mini exercise 1
+  final pass = Password()..value = '%Xjdfgnuh37gH';
+  print(pass.toString());
+  print(pass.isValid());
 }
 
 class MyClass {
@@ -39,5 +47,20 @@ class User {
   //  to json
   String toJson() {
     return '{"id": $id, "name":"$name"}';
+  }
+}
+
+class Password {
+  String value = '';
+
+  @override
+  String toString() {
+    // TODO: implement toString
+    return 'Password(value: $value)';
+  }
+
+  bool isValid() {
+    if (value.length > 8) return true;
+    return false;
   }
 }
