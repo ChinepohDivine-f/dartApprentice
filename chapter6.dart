@@ -64,3 +64,25 @@ class Password {
     return false;
   }
 }
+
+/// constructors 
+/// they are methods used to create instances of a class
+/// the return type of a constructor is the class itself
+/// they have thesame name as the class
+/// 
+/// 
+/// 
+/// defualt constructor
+/// this is provided by dart
+/// 
+/// 
+/// 
+/// custom constructor
+/// written by the programmer
+/// 
+/// 
+/// lon-form constructor
+/// User (int id, String name) {
+/// this.id = id;
+/// this.name = name;
+/// }
