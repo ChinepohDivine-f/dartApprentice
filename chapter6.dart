@@ -5,9 +5,9 @@ void main() {
   object.myMethod();
 
   // create and instace of user
-  final user = User();
-  user.id = 42;
-  user.name = 'Boris Atoh';
+  final user = User()
+  ..id = 42
+  ..name = 'Boris Atoh'; // using cascading the semicolon appears on the last line
   print(user.toJson());
   print(user.toString());
 }
